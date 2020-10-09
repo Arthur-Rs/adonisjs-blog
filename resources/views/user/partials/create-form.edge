@@ -1,0 +1,25 @@
+{{ csrfField() }}
+
+@!component('components.input',{
+  placeholder: 'Nome de usuário',
+  name: 'username',
+
+})
+@!component('components.input',{
+  placeholder: 'Email',
+  name: 'email',
+  type: 'email'
+})
+@!component('components.input',{
+  placeholder: 'Senha',
+  name: 'password',
+  type: 'password'
+})
+@!component('components.input',{
+  placeholder: 'Confirme sua senha',
+  name: 'confirmPassword',
+  type: 'password'
+})
+@!component('components.button',{
+  text: 'Finalizar'
+})

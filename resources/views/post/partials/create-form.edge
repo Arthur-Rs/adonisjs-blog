@@ -1,0 +1,15 @@
+{{ csrfField() }}
+
+@!component('components.input',{
+  placeholder: 'Título',
+  name: 'title',
+
+})
+@!component('components.textarea',{
+  placeholder: 'Corpo',
+  name: 'body',
+})
+
+@!component('components.button',{
+  text: 'Finalizar'
+})

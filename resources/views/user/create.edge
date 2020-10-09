@@ -1,0 +1,32 @@
+
+@layout('layouts.default')
+
+@section('body')
+
+  @set('title', 'Cadastro')
+
+
+  <main class="side-form side-right">
+
+    <header class="side-form-header">
+      <h1>Cadastro</h1>
+      <span>Bem-vindo a DevHome</span>
+    </header>
+
+    <form
+      action="{{route('UserController.store')}}"
+      method="POST"
+      class="form"
+    >
+      @include('user.partials.create-form')
+    </form>
+
+    <footer class="side-form-footer">
+      <a class="form-sign-up-to-sign-in" href="{{route('SessionController.create')}}">Fazer login</a>
+      <a class="form-go-back" href="/"><- Voltar</a>
+    </footer>
+  </main>
+
+@endsection
+
+

@@ -1,0 +1,12 @@
+<textarea
+  class="form-input"
+  id="{{ name }}"
+  name="{{ name }}"
+  @if(placeholder)
+    placeholder="{{ placeholder }}"
+  @endif
+  @if(value)
+    value="{{ value }}"
+  @endif
+  {{ required ? 'required' : null }}
+></textarea>

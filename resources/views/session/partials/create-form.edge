@@ -1,0 +1,18 @@
+{{ csrfField() }}
+
+
+@!component('components.input',{
+  placeholder: 'Email',
+  name: 'email',
+  type: 'email'
+})
+
+@!component('components.input',{
+  placeholder: 'Senha',
+  name: 'password',
+  type: 'password'
+})
+
+@!component('components.button',{
+  text: 'Logar-se'
+})

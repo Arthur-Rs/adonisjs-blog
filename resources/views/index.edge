@@ -1,0 +1,24 @@
+
+@layout('layouts.default')
+
+@section('body')
+
+  @set('title', 'Welcome')
+
+  @include('partials/header')
+
+  <section class="new-posts">
+    <h1 class="title">Novas publicações</h1>
+
+    <div class="post-container">
+    @each(post in posts)
+      @include('partials.post')
+    @else
+      <span class="empty-post">Ainda não há uma publicação!</span>
+    @endeach
+  </div>
+  </section>
+
+@endsection
+
+

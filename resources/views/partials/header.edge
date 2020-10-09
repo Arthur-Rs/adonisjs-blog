@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="content">
+    @inlineSvg('assets/logo.svg')
+
+    @loggedIn
+      <div>
+        <span class="hello-user">Olá, {{auth.user.username}}!</span>
+        <a class="header-sign-in" href="{{route('PostController.create')}}">Criar Post</a>
+      </div>
+    @else
+      <nav>
+        <a class="header-sign-up" href="{{route('UserController.create')}}">Cadastro</a>
+        <a class="header-sign-in" href="{{route('SessionController.create')}}">Login</a>
+      </nav>
+    @endloggedIn
+ </div>
+</header>

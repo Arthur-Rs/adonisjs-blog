@@ -1,0 +1,30 @@
+
+@layout('layouts.default')
+
+@section('body')
+
+  @set('title', 'Novo post')
+
+
+  <main class="full-form">
+
+    <header class="side-form-header">
+      <h1>Novo Post</h1>
+    </header>
+
+    <form
+      action="{{route('PostController.store')}}"
+      method="POST"
+      class="full-form"
+    >
+      @include('post.partials.create-form')
+    </form>
+
+    <footer class="side-form-footer">
+      <a class="form-go-back" href="/"><- Voltar</a>
+    </footer>
+  </main>
+
+@endsection
+
+
